@@ -1,7 +1,8 @@
 import ContactList from './ContactList/ContactList';
-import { ContactForm } from './ContactForm/ContactForm';
-import { Filter } from './Filter/Filter';
+import  ContactForm  from './ContactForm/ContactForm';
+import  Filter from './Filter/Filter';
 import css from './app.module.css'
+
 
 export const App = () => {
   return (

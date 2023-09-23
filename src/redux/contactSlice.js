@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-
-const contactsSlice = createSlice({
+export const { addContact, deleteContact } = contactSlice.actions;
+const contactSlice = createSlice({
   name: 'contacts',
   initialState: JSON.parse(localStorage.getItem('contacts')) || [
     { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
@@ -24,6 +24,4 @@ const contactsSlice = createSlice({
     },
   },
 });
-
-export const { addContact, deleteContact } = contactsSlice.actions;
-export default contactsSlice.reducer;
+export default contactSlice.reducer;
