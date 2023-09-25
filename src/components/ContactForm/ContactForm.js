@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contactSlice';
 import { nanoid } from '@reduxjs/toolkit';
 import css from './ContactForm.module.css';
-
+import { selectContacts } from 'redux/selectors';
 function ContactForm() {
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.contacts.items);
+  const contacts = useSelector(selectContacts);
   const [contactName, setContactName] = useState('');
   const [contactNumber, setContactNumber] = useState('');
 
